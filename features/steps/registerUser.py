@@ -4,6 +4,7 @@ from Pages.HomePage import homePage
 from Pages.RegisterPage import registerPage
 from Utilities.ConfigReader import readConfig
 from Utilities.ConfigReader import readConfig
+from Utilities.RandomData import *
 
 
 @given(u'user navigate to home page')
@@ -25,9 +26,9 @@ def step_impl(context):
 @given(u'user enter all required information')
 def step_impl(context):
 
-    context.rp.enterPersonalDetails("xcdgkjhyx", "hsdghdsb", "dmnmlokhd@gmail.com", "37563968874")
+    context.rp.enterPersonalDetails(firstName(), lastName(), email(), telephone())
 
-    context.rp.enterPassword("gdhhvbdklbdjs")
+    context.rp.enterPassword(password())
 
 
 @when(u'user click on privacy button and click to continue')
