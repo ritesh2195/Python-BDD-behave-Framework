@@ -1,10 +1,11 @@
 from selenium.webdriver.common.by import By
 
+from Pages.BasePage import basePage
 from Pages.LoginPage import loginPage
 from Pages.RegisterPage import registerPage
 
 
-class homePage:
+class homePage(basePage):
     MyAccount_xpath = (By.XPATH, "//span[text()='My Account']")
 
     Register_xpath = (By.XPATH, "//a[text()='Register']")
@@ -13,7 +14,7 @@ class homePage:
 
     def __init__(self, driver):
 
-        self.driver = driver
+        super().__init__(driver)
 
     def openURL(self, url):
         self.driver.get(url)

@@ -11,7 +11,7 @@ class page(ABC):
         self.wait = WebDriverWait(self.driver, 15)
 
     @abstractmethod
-    def getTitle(self):
+    def getPageTitle(self):
         pass
 
     @abstractmethod

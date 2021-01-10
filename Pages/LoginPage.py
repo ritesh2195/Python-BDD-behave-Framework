@@ -1,7 +1,9 @@
 from selenium.webdriver.common.by import By
 
+from Pages.BasePage import basePage
 
-class loginPage:
+
+class loginPage(basePage):
 
     __Email_css = (By.CSS_SELECTOR, "#input-email")
 
@@ -17,7 +19,7 @@ class loginPage:
 
     def __init__(self, driver):
 
-        self.driver = driver
+        super().__init__(driver)
 
     def doLogin(self, email, password):
 
@@ -30,6 +32,8 @@ class loginPage:
         self.driver.find_element(*loginPage.__LoginButton_xpath).click()
 
     def validateLogin(self):
+
+        self.elementToClickable(self.__EditAccount_xpath)
 
         self.driver.find_element(*loginPage.__EditAccount_xpath).click()
 

@@ -35,8 +35,6 @@ def step_impl(context):
 @then(u'user should be able login successfully')
 def step_impl(context):
 
-    time.sleep(5)
-
     mail = context.lp.validateLogin()
 
     assert mail == context.email

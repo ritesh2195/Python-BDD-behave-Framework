@@ -10,8 +10,8 @@ Feature: Login into application
     Examples:
       | email  | password  |
       | mnju@gmail.com  | qwerty  |
-      |vinod1254@gmail.com  | qwerty  |
-      | hddej@gmail.com | hdgefug |
+      #|vinod1254@gmail.com  | qwerty  |
+      #| hddej@gmail.com | hdgefug |
 
   Scenario: forget password with valid email
 
