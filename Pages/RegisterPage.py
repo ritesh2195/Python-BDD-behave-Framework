@@ -1,7 +1,10 @@
 from selenium.webdriver.common.by import By
 
+from Pages.BasePage import basePage
 
-class registerPage:
+
+class registerPage(basePage):
+
     FirstName_css = (By.CSS_SELECTOR, "#input-firstname")
 
     LastName_css = (By.CSS_SELECTOR, "#input-lastname")
@@ -21,9 +24,11 @@ class registerPage:
     ConfirmationMessage_xpath = (By.XPATH, "//div[@id='content']//h1")
 
     def __init__(self, driver):
-        self.driver = driver
+
+        super().__init__(driver)
 
     def enterPersonalDetails(self, fname, lname, email, telephone):
+
         self.driver.find_element(*registerPage.FirstName_css).send_keys(fname)
 
         self.driver.find_element(*registerPage.LastName_css).send_keys(lname)
@@ -33,11 +38,13 @@ class registerPage:
         self.driver.find_element(*registerPage.Telephone_css).send_keys(telephone)
 
     def enterPassword(self, password):
+
         self.driver.find_element(*registerPage.Password_css).send_keys(password)
 
         self.driver.find_element(*registerPage.ConfirmPassword_css).send_keys(password)
 
     def clickButton(self):
+
         self.driver.find_element(*registerPage.PrivacyPolicy_name).click()
 
         self.driver.find_element(*registerPage.Continue_xpath).click()
