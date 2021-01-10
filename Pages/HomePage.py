@@ -6,11 +6,11 @@ from Pages.RegisterPage import registerPage
 
 
 class homePage(basePage):
-    MyAccount_xpath = (By.XPATH, "//span[text()='My Account']")
+    __MyAccount_xpath = (By.XPATH, "//span[text()='My Account']")
 
-    Register_xpath = (By.XPATH, "//a[text()='Register']")
+    __Register_xpath = (By.XPATH, "//a[text()='Register']")
 
-    Login_xpath = (By.XPATH, "//a[text()='Login']")
+    __Login_xpath = (By.XPATH, "//a[text()='Login']")
 
     def __init__(self, driver):
 
@@ -20,10 +20,10 @@ class homePage(basePage):
         self.driver.get(url)
 
     def clickMyAccount(self):
-        self.driver.find_element(*homePage.MyAccount_xpath).click()
+        self.driver.find_element(*homePage.__MyAccount_xpath).click()
 
     def clickRegister(self):
-        self.driver.find_element(*homePage.Register_xpath).click()
+        self.driver.find_element(*homePage.__Register_xpath).click()
 
         self.rp = registerPage(self.driver)
 
@@ -31,7 +31,7 @@ class homePage(basePage):
 
     def clickLogin(self):
 
-        self.driver.find_element(*homePage.Login_xpath).click()
+        self.driver.find_element(*homePage.__Login_xpath).click()
 
         self.lp = loginPage(self.driver)
 
