@@ -13,6 +13,8 @@ class Driver:
 
             driver = webdriver.Chrome(ChromeDriverManager().install())
 
+            driver.maximize_window()
+
             return driver
 
         elif readConfig.getBrowser() == "Firefox":

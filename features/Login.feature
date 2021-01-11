@@ -13,5 +13,4 @@ Feature: Login into application
       #|vinod1254@gmail.com  | qwerty  |
       #| hddej@gmail.com | hdgefug |
 
-  Scenario: forget password with valid email
 

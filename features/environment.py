@@ -5,28 +5,11 @@ from Utilities.ConfigReader import readConfig
 
 def before_scenario(context, scenario):
 
-    if "login" in scenario.tags:
+    driver = Driver.getDriver()
 
-        driver = Driver.getDriver()
-
-        driver.maximize_window()
-
-        context.driver = driver
-
-    elif "register" in scenario.tags:
-
-        driver = Driver.getDriver()
-
-        driver.maximize_window()
-
-        context.driver = driver
+    context.driver = driver
 
 
 def after_scenario(context, scenario):
-    if "login" in scenario.tags:
 
-        context.driver.close()
-
-    elif "register" in scenario.tags:
-
-        context.driver.close()
+    context.driver.close()
