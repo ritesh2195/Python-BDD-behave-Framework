@@ -4,6 +4,7 @@ from behave import given, when, then
 
 from Pages.HomePage import homePage
 from Utilities.ConfigReader import readConfig
+from Utilities.captureScreenshot import takeScreenshot
 
 
 @given(u'user navigate to login page')
@@ -35,7 +36,15 @@ def step_impl(context):
 @then(u'user should be able login successfully')
 def step_impl(context):
 
-    mail = context.lp.validateLogin()
+    try:
 
-    assert mail == context.email
+        mail = context.lp.validateLogin()
+
+        assert mail == context.email
+
+    except AssertionError as msg:
+
+        takeScreenshot(context.driver)
+
+        assert False
 

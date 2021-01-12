@@ -1,6 +1,10 @@
-from behave.fixture import use_fixture_by_tag
+import sys
+
+import allure
+from allure_commons.types import AttachmentType
+
 from Utilities.DriverFactory import Driver
-from Utilities.ConfigReader import readConfig
+from datetime import datetime
 
 
 def before_scenario(context, scenario):

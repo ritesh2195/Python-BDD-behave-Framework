@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 
 from Pages.BasePage import basePage
+from Pages.SearchPage import searchPage
 
 
 class loginPage(basePage):
@@ -30,6 +31,10 @@ class loginPage(basePage):
     def clickLoginButton(self):
 
         self.driver.find_element(*loginPage.__LoginButton_xpath).click()
+
+        self.sp = searchPage(self.driver)
+
+        return self.sp
 
     def validateLogin(self):
 
