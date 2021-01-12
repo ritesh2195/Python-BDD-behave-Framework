@@ -28,9 +28,10 @@ def step_impl(context, product):
     context.productName = context.sp.searchProduct(context.product)
 
 
-@when(u'user add "{product}" in cart')
-def step_impl(context, product):
-    context.no = readConfig.getQuantity()
+@when(u'user add "{NoOfProduct}" in cart')
+def step_impl(context, NoOfProduct):
+
+    context.NoOfProduct = readConfig.getQuantity()
 
     context.initialPrice = context.sp.getPriceOfProduct()
 
