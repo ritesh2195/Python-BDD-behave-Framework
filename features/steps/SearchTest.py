@@ -33,9 +33,7 @@ def step_impl(context, NoOfProduct):
 
     context.NoOfProduct = readConfig.getQuantity()
 
-    context.initialPrice = context.sp.getPriceOfProduct()
-
-    context.sp.addToCart(context.no)
+    context.sp.addToCart(context.NoOfProduct)
 
 
 @then(u'user should able to place order of that "{product}"')
@@ -43,9 +41,15 @@ def step_impl(context, product):
 
     finalProductName = context.sp.getFinalProductName()
 
+    cartPrice = context.sp.getCartPrice()
+
+    finalPrice = context.sp.getFinalPrice()
+
     try:
 
         assert context.productName == finalProductName
+
+        assert cartPrice == finalPrice
 
     except AssertionError:
 

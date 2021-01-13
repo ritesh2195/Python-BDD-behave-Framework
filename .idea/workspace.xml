@@ -2,23 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab714342-f100-4320-a65d-4bc5ad86f49f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Utilities/captureScreenshot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/17c27669-62a3-4ff8-82d5-2c13426865db-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/1aa7343e-6366-4f3b-bc58-ed59a5feffa4-attachment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/2671115c-dd7b-4df4-a733-44f700312c65-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/4f0ed2d0-d10e-4232-b564-71b1bc8a909b-attachment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/603e9a9f-3515-44eb-b487-72ae52e2faa2-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/aed5c905-8470-4e3a-9249-bb5e37170536-attachment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/bf30c1f9-2a00-436e-9530-2c1280c3a009-result.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/project.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/project.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/LoginPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/LoginPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilities/ConfigReader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities/ConfigReader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilities/DriverFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities/DriverFactory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/SearchProduct.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/SearchProduct.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/SearchPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/SearchPage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/environment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/Login.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/Login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/SearchTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/SearchTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/steps/registerUser.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/registerUser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/17c27669-62a3-4ff8-82d5-2c13426865db-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/1aa7343e-6366-4f3b-bc58-ed59a5feffa4-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/2671115c-dd7b-4df4-a733-44f700312c65-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/4f0ed2d0-d10e-4232-b564-71b1bc8a909b-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/603e9a9f-3515-44eb-b487-72ae52e2faa2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/aed5c905-8470-4e3a-9249-bb5e37170536-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/bf30c1f9-2a00-436e-9530-2c1280c3a009-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/c641771c-0f5b-433f-992f-721491fe72b0-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/dca600da-cb3e-4fe6-87f5-fe84e64eab33-result.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

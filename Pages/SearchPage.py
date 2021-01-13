@@ -12,7 +12,7 @@ class searchPage(basePage):
 
     __SearchedProduct_xpath = (By.XPATH, "//div[@class='caption']//h4//a")
 
-    __PriceOfProduct_xpath = (By.XPATH, "//ul[@class='list-unstyled']//li//h2")
+    __PriceOfProduct_xpath = (By.XPATH, "//h2[text()='What would you like to do next?']//preceding::td[1]")
 
     __NoOfProduct_name = (By.NAME, "quantity")
 
@@ -59,11 +59,11 @@ class searchPage(basePage):
 
         time.sleep(5)
 
-    def getCartPrice(self):
+    def getFinalPrice(self):
 
         return self.driver.find_element(*searchPage.__finalPrice_xpath).text
 
-    def getPriceOfProduct(self):
+    def getCartPrice(self):
 
         return self.driver.find_element(*searchPage.__PriceOfProduct_xpath).text
 

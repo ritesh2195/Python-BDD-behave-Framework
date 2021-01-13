@@ -43,7 +43,7 @@ def step_impl(context):
 
     try:
 
-        assert msg == "Your Account Has not Been Created!"
+        assert msg == "Your Account Has Been Created!"
 
     except AssertionError as msg:
 
