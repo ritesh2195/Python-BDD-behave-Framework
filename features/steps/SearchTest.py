@@ -28,16 +28,16 @@ def step_impl(context, product):
     context.productName = context.sp.searchProduct(context.product)
 
 
-@when(u'user add "{NoOfProduct}" in cart')
-def step_impl(context, NoOfProduct):
+@when(u'user add no. of products in cart')
+def step_impl(context):
 
     context.NoOfProduct = readConfig.getQuantity()
 
     context.sp.addToCart(context.NoOfProduct)
 
 
-@then(u'user should able to place order of that "{product}"')
-def step_impl(context, product):
+@then(u'user should able to place order of that product')
+def step_impl(context):
 
     finalProductName = context.sp.getFinalProductName()
 
