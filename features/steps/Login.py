@@ -1,15 +1,10 @@
-import time
-
 from behave import given, when, then
-
 from Pages.HomePage import homePage
 from Utilities.ConfigReader import readConfig
-from Utilities.captureScreenshot import takeScreenshot
 
 
 @given(u'user navigate to login page')
 def step_impl(context):
-
     context.hp = homePage(context.driver)
 
     context.hp.openURL(readConfig.getURL())
@@ -21,7 +16,6 @@ def step_impl(context):
 
 @given(u'user enter valid "{email}" and "{password}"')
 def step_impl(context, email, password):
-
     context.lp.doLogin(email, password)
 
     context.email = email
@@ -36,15 +30,8 @@ def step_impl(context):
 @then(u'user should be able login successfully')
 def step_impl(context):
 
-    try:
+    assert context.lp.verifyPageTitle() == 'My Account'
 
-        mail = context.lp.validateLogin()
+    mail = context.lp.validateLogin()
 
-        assert mail == context.email
-
-    except AssertionError as msg:
-
-        takeScreenshot(context.driver)
-
-        assert False
-
+    assert mail == context.email

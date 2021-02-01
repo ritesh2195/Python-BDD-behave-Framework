@@ -1,8 +1,6 @@
 from behave import given, when, then
-
 from Pages.HomePage import homePage
 from Utilities.ConfigReader import readConfig
-from Utilities.captureScreenshot import takeScreenshot
 
 
 @given(u'user login into application')
@@ -45,14 +43,7 @@ def step_impl(context):
 
     finalPrice = context.sp.getFinalPrice()
 
-    try:
+    assert context.productName == finalProductName
 
-        assert context.productName == finalProductName
+    assert cartPrice == finalPrice
 
-        assert cartPrice == finalPrice
-
-    except AssertionError:
-
-        takeScreenshot(context.driver)
-
-        assert False

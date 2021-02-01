@@ -36,6 +36,10 @@ class loginPage(basePage):
 
         return self.sp
 
+    def verifyPageTitle(self):
+
+        return self.getPageTitle()
+
     def validateLogin(self):
 
         self.elementToClickable(self.__EditAccount_xpath)
